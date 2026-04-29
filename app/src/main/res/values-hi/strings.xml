@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">शिशु-स्नेह</string>
+    <string name="app_tagline">बच्चे के पहले साल की गाइड</string>
+    <string name="app_name_hi">शिशु-स्नेह</string>
+
+    <!-- Notification Channels -->
+    <string name="channel_vaccination">टीकाकरण रिमाइंडर</string>
+    <string name="channel_vaccination_desc">बच्चे के टीकाकरण की महत्वपूर्ण तारीख रिमाइंडर</string>
+    <string name="channel_feeding">आहार रिमाइंडर</string>
+    <string name="channel_feeding_desc">दूध पिलाने के समय का रिमाइंडर</string>
+    <string name="channel_general">सामान्य अपडेट</string>
+
+    <!-- Notifications -->
+    <string name="vaccine_due_today">%1$s का टीका आज लगना है!</string>
+    <string name="vaccine_due_tomorrow">%1$s का टीका कल लगना है</string>
+    <string name="vaccine_due_days">%1$s का टीका %2$d दिन में लगना है</string>
+    <string name="vaccine_prevents">रोकता है: %1$s</string>
+    <string name="feeding_reminder_title">दूध पिलाने का समय</string>
+    <string name="feeding_reminder_text">बच्चे को दूध पिलाने का समय है। लॉग करने के लिए टैप करें।</string>
+
+    <!-- Onboarding -->
+    <string name="choose_language">अपनी भाषा चुनें</string>
+    <string name="choose_language_hi">अपनी भाषा चुनें</string>
+    <string name="continue_btn">आगे बढ़ें</string>
+    <string name="get_started">शुरू करें</string>
+    <string name="skip">छोड़ें</string>
+    <string name="next">अगला</string>
+    <string name="onboard_track_growth">विकास ट्रैक करें</string>
+    <string name="onboard_track_growth_desc">WHO चार्ट से वज़न और ऊंचाई पर नज़र रखें।</string>
+    <string name="onboard_vaccines">कोई टीका न छूटे</string>
+    <string name="onboard_vaccines_desc">हर टीकाकरण के लिए ऑटोमैटिक रिमाइंडर।</string>
+    <string name="onboard_feeding">विशेषज्ञ आहार गाइड</string>
+    <string name="onboard_feeding_desc">हिंदी या अंग्रेज़ी में दैनिक सुझाव और AI उत्तर।</string>
+
+    <!-- Profile Setup -->
+    <string name="your_child">आपका बच्चा</string>
+    <string name="setup_profile">प्रोफ़ाइल सेटअप</string>
+    <string name="edit_profile">प्रोफ़ाइल संपादित करें</string>
+    <string name="baby_name">बच्चे का नाम</string>
+    <string name="mother_name">माँ का नाम</string>
+    <string name="date_of_birth">जन्म तिथि</string>
+    <string name="birth_weight">जन्म का वज़न (किग्रा)</string>
+    <string name="gender">लिंग</string>
+    <string name="boy">लड़का</string>
+    <string name="girl">लड़की</string>
+    <string name="create_profile">प्रोफ़ाइल बनाएं</string>
+    <string name="save_changes">बदलाव सहेजें</string>
+    <string name="dob_locked_hint">जन्म तिथि बदली नहीं जा सकती क्योंकि यह टीका और लक्ष्य अनुसूची को प्रभावित करती है।</string>
+    <string name="update_info">बच्चे की जानकारी अपडेट करें।</string>
+
+    <!-- Home -->
+    <string name="home_title">डैशबोर्ड</string>
+    <string name="nav_home">होम</string>
+    <string name="todays_tip">आज की सलाह</string>
+    <string name="next_vaccine">अगला टीका</string>
+    <string name="growth">विकास</string>
+    <string name="vaccines">टीके</string>
+    <string name="milestones">लक्ष्य</string>
+    <string name="feeding">आहार</string>
+    <string name="quick_actions">त्वरित कार्य</string>
+    <string name="hello_parent">नमस्ते</string>
+
+    <!-- Growth -->
+    <string name="who_standards">WHO मानक</string>
+    <string name="growth_metrics">विकास आँकड़े</string>
+    <string name="growth_chart">विकास चार्ट</string>
+    <string name="add_measurement">माप जोड़ें</string>
+    <string name="add_log">लॉग जोड़ें</string>
+    <string name="weight">वज़न</string>
+    <string name="height">ऊंचाई</string>
+    <string name="weight_kg">वज़न (किग्रा)</string>
+    <string name="height_cm">ऊंचाई (सेमी)</string>
+    <string name="height_cm_optional">ऊंचाई (सेमी) — वैकल्पिक</string>
+    <string name="trajectory">प्रगति</string>
+    <string name="history">इतिहास</string>
+    <string name="add_first_measurement">पहला माप जोड़ें</string>
+    <string name="underweight_warning">बच्चे का वज़न अपेक्षित से कम है। कृपया अपने स्वास्थ्य केंद्र जाएं।</string>
+    <string name="unit_kg">किग्रा</string>
+    <string name="unit_cm">सेमी</string>
+    <string name="percentile_format">%1$sवां पर्सेंटाइल</string>
+    <string name="add">जोड़ें</string>
+    <string name="cancel">रद्द करें</string>
+    <string name="delete">हटाएं</string>
+
+    <!-- Vaccination -->
+    <string name="immunisation_calendar">टीकाकरण कैलेंडर</string>
+    <string name="vaccination_progress">टीकाकरण प्रगति</string>
+    <string name="x_of_y_completed">%1$d में से %2$d पूर्ण</string>
+    <string name="all">सभी</string>
+    <string name="upcoming">आगामी</string>
+    <string name="mark_done">पूरा हुआ</string>
+    <string name="undo">वापस</string>
+    <string name="overdue">देरी</string>
+    <string name="pending">बाकी</string>
+    <string name="completed">पूरा</string>
+    <string name="all_vaccines_done">सभी टीके पूरे!</string>
+    <string name="all_vaccines_done_subtitle">बच्चे की सुरक्षा का शानदार काम!</string>
+    <string name="date_administered">टीका लगने की तारीख</string>
+    <string name="when_vaccine_given">यह टीका कब लगाया गया?</string>
+    <string name="confirm">पुष्टि करें</string>
+    <string name="given_date">दिनांक: %1$s</string>
+    <string name="due_date">नियत: %1$s</string>
+    <string name="dose_format">%1$s • खुराक %2$d/%3$d</string>
+
+    <!-- Milestones -->
+    <string name="milestone_checklist">लक्ष्य चेकलिस्ट</string>
+    <string name="achieved">हासिल</string>
+    <string name="not_yet">अभी नहीं</string>
+    <string name="skipped">छोड़ दिया</string>
+    <string name="milestone_advisory">कुछ लक्ष्य अभी तक नहीं पहुँचे। बाल रोग विशेषज्ञ से जाँच कराएं।</string>
+    <string name="milestone_congrats">बहुत अच्छा! लक्ष्य हासिल!</string>
+
+    <!-- Feeding -->
+    <string name="nutrition">पोषण</string>
+    <string name="feeding_guide">आहार गाइड</string>
+    <string name="log_feed">फ़ीड लॉग</string>
+    <string name="log_feeding">फ़ीडिंग लॉग करें</string>
+    <string name="feedings_today">आज %1$d बार दूध पिलाया</string>
+    <string name="tap_to_log">नई फ़ीडिंग लॉग करने के लिए + दबाएं</string>
+    <string name="todays_insight">आज की जानकारी</string>
+    <string name="ask_ai">AI गाइड से पूछें</string>
+    <string name="ask_ai_subtitle">आहार के सवालों के जवाब पाएं</string>
+    <string name="recent_feedings">हाल की फ़ीडिंग</string>
+    <string name="common_questions">सामान्य सवाल</string>
+    <string name="ai_disclaimer">AI-जनित मार्गदर्शन — यह चिकित्सा नुस्खा नहीं है।</string>
+    <string name="type">प्रकार</string>
+    <string name="side">साइड</string>
+    <string name="breast">स्तनपान</string>
+    <string name="formula">फ़ॉर्मूला</string>
+    <string name="solid">ठोस आहार</string>
+    <string name="left">बाएं</string>
+    <string name="right">दाएं</string>
+    <string name="both">दोनों</string>
+    <string name="duration_min">अवधि (मिनट)</string>
+    <string name="quantity_ml">मात्रा (मिली)</string>
+    <string name="food_description">भोजन विवरण</string>
+    <string name="notes_optional">नोट्स (वैकल्पिक)</string>
+    <string name="save">सहेजें</string>
+    <string name="breastfeed">स्तनपान</string>
+    <string name="solid_food">ठोस आहार</string>
+
+    <!-- AI Chat -->
+    <string name="ai_health_guide">AI स्वास्थ्य गाइड</string>
+    <string name="ask_anything">कुछ भी पूछें!</string>
+    <string name="ai_chat_subtitle">स्तनपान, पोषण और बच्चे की देखभाल के बारे में मदद कर सकता हूँ।</string>
+    <string name="type_question">अपना सवाल लिखें…</string>
+    <string name="helpful">मददगार</string>
+    <string name="not_helpful">मददगार नहीं</string>
+
+    <!-- Settings -->
+    <string name="settings">सेटिंग्स</string>
+    <string name="preferences">प्राथमिकताएं</string>
+    <string name="language">भाषा</string>
+    <string name="notifications">सूचनाएं</string>
+    <string name="dark_mode">डार्क मोड</string>
+    <string name="about">जानकारी</string>
+    <string name="privacy">गोपनीयता</string>
+    <string name="privacy_text">सभी डेटा आपके डिवाइस पर स्थानीय रूप से संग्रहीत है। आपकी सहमति के बिना कोई डेटा किसी सर्वर पर नहीं भेजा जाता। DPDPA 2023 के अनुरूप।</string>
+    <string name="version_label">वर्शन 1.0</string>
+    <string name="edit_profile_btn">प्रोफ़ाइल संपादित करें</string>
+    <string name="english">English</string>
+    <string name="hindi">हिन्दी</string>
+</resources>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">Shishu-Sneh</string>
+    <string name="app_tagline">Baby\'s First Year Guide</string>
+    <string name="app_name_hi">शिशु-स्नेह</string>
+
+    <!-- Notification Channels -->
+    <string name="channel_vaccination">Vaccination Reminders</string>
+    <string name="channel_vaccination_desc">Important vaccination date reminders for your baby</string>
+    <string name="channel_feeding">Feeding Reminders</string>
+    <string name="channel_feeding_desc">Gentle feeding time reminders</string>
+    <string name="channel_general">General Updates</string>
+
+    <!-- Notifications -->
+    <string name="vaccine_due_today">%1$s vaccine is due today!</string>
+    <string name="vaccine_due_tomorrow">%1$s vaccine is due tomorrow</string>
+    <string name="vaccine_due_days">%1$s vaccine due in %2$d days</string>
+    <string name="vaccine_prevents">Prevents: %1$s</string>
+    <string name="feeding_reminder_title">Feeding Time</string>
+    <string name="feeding_reminder_text">Time for baby\'s feeding. Tap to log.</string>
+
+    <!-- Onboarding -->
+    <string name="choose_language">Choose your language</string>
+    <string name="choose_language_hi">अपनी भाषा चुनें</string>
+    <string name="continue_btn">Continue</string>
+    <string name="get_started">Get Started</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="onboard_track_growth">Track Growth</string>
+    <string name="onboard_track_growth_desc">Monitor weight &amp; height with WHO charts.</string>
+    <string name="onboard_vaccines">Never Miss a Vaccine</string>
+    <string name="onboard_vaccines_desc">Automatic reminders for every vaccination.</string>
+    <string name="onboard_feeding">Expert Feeding Guide</string>
+    <string name="onboard_feeding_desc">Daily tips &amp; AI answers in Hindi or English.</string>
+
+    <!-- Profile Setup -->
+    <string name="your_child">YOUR CHILD</string>
+    <string name="setup_profile">Setup Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="baby_name">Baby\'s Name</string>
+    <string name="mother_name">Mother\'s Name</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="birth_weight">Birth Weight (kg)</string>
+    <string name="gender">Gender</string>
+    <string name="boy">Boy</string>
+    <string name="girl">Girl</string>
+    <string name="create_profile">Create Profile</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="dob_locked_hint">Date of birth cannot be changed as it affects vaccine schedules and milestones.</string>
+    <string name="update_info">Update your baby\'s information.</string>
+
+    <!-- Home -->
+    <string name="home_title">Dashboard</string>
+    <string name="nav_home">Home</string>
+    <string name="todays_tip">Today\'s Tip</string>
+    <string name="next_vaccine">Next Vaccine</string>
+    <string name="growth">Growth</string>
+    <string name="vaccines">Vaccines</string>
+    <string name="milestones">Milestones</string>
+    <string name="feeding">Feeding</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="hello_parent">Hello, Parent</string>
+
+    <!-- Growth -->
+    <string name="who_standards">WHO STANDARDS</string>
+    <string name="growth_metrics">Growth Metrics</string>
+    <string name="growth_chart">Growth Chart</string>
+    <string name="add_measurement">Add Measurement</string>
+    <string name="add_log">Add Log</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="weight_kg">Weight (kg)</string>
+    <string name="height_cm">Height (cm)</string>
+    <string name="height_cm_optional">Height (cm) — optional</string>
+    <string name="trajectory">Trajectory</string>
+    <string name="history">History</string>
+    <string name="add_first_measurement">Add your first measurement</string>
+    <string name="underweight_warning">Baby\'s weight is below expected. Please visit your health centre.</string>
+    <string name="unit_kg">kg</string>
+    <string name="unit_cm">cm</string>
+    <string name="percentile_format">%1$sth Percentile</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+
+    <!-- Vaccination -->
+    <string name="immunisation_calendar">Immunisation Calendar</string>
+    <string name="vaccination_progress">Vaccination Progress</string>
+    <string name="x_of_y_completed">%1$d of %2$d completed</string>
+    <string name="all">All</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="mark_done">Done</string>
+    <string name="undo">Undo</string>
+    <string name="overdue">Overdue</string>
+    <string name="pending">Pending</string>
+    <string name="completed">Completed</string>
+    <string name="all_vaccines_done">All vaccines completed!</string>
+    <string name="all_vaccines_done_subtitle">Great job protecting your little one!</string>
+    <string name="date_administered">Date Administered</string>
+    <string name="when_vaccine_given">When was this vaccine given?</string>
+    <string name="confirm">Confirm</string>
+    <string name="given_date">Given: %1$s</string>
+    <string name="due_date">Due: %1$s</string>
+    <string name="dose_format">%1$s • Dose %2$d/%3$d</string>
+
+    <!-- Milestones -->
+    <string name="milestone_checklist">Milestone Checklist</string>
+    <string name="achieved">Achieved</string>
+    <string name="not_yet">Not Yet</string>
+    <string name="skipped">Skipped</string>
+    <string name="milestone_advisory">Some milestones not yet reached. Consider a check-up with your paediatrician.</string>
+    <string name="milestone_congrats">Wonderful! Milestone achieved!</string>
+
+    <!-- Feeding -->
+    <string name="nutrition">NUTRITION</string>
+    <string name="feeding_guide">Feeding Guide</string>
+    <string name="log_feed">Log Feed</string>
+    <string name="log_feeding">Log Feeding</string>
+    <string name="feedings_today">%1$d feedings today</string>
+    <string name="tap_to_log">Tap + to log a new feeding</string>
+    <string name="todays_insight">TODAY\'S INSIGHT</string>
+    <string name="ask_ai">Ask the AI Guide</string>
+    <string name="ask_ai_subtitle">Get answers to your feeding questions</string>
+    <string name="recent_feedings">Recent Feedings</string>
+    <string name="common_questions">Common Questions</string>
+    <string name="ai_disclaimer">AI-generated guidance — not a medical prescription.</string>
+    <string name="type">Type</string>
+    <string name="side">Side</string>
+    <string name="breast">Breast</string>
+    <string name="formula">Formula</string>
+    <string name="solid">Solid</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="both">Both</string>
+    <string name="duration_min">Duration (min)</string>
+    <string name="quantity_ml">Quantity (ml)</string>
+    <string name="food_description">Food description</string>
+    <string name="notes_optional">Notes (optional)</string>
+    <string name="save">Save</string>
+    <string name="breastfeed">Breastfeed</string>
+    <string name="solid_food">Solid Food</string>
+
+    <!-- AI Chat -->
+    <string name="ai_health_guide">AI Health Guide</string>
+    <string name="ask_anything">Ask me anything!</string>
+    <string name="ai_chat_subtitle">I can help with breastfeeding, nutrition, and baby care questions.</string>
+    <string name="type_question">Type your question…</string>
+    <string name="helpful">Helpful</string>
+    <string name="not_helpful">Not helpful</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="preferences">PREFERENCES</string>
+    <string name="language">Language</string>
+    <string name="notifications">Notifications</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="about">About</string>
+    <string name="privacy">Privacy</string>
+    <string name="privacy_text">All data is stored locally on your device. No data is sent to any server without your consent. Compliant with DPDPA 2023.</string>
+    <string name="version_label">Version 1.0</string>
+    <string name="edit_profile_btn">Edit Profile</string>
+    <string name="english">English</string>
+    <string name="hindi">हिन्दी</string>
+</resources>
