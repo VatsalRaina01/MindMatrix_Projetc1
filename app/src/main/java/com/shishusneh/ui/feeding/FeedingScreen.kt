@@ -290,12 +290,12 @@ fun FeedingScreen(
     if (state.showAddDialog) {
         AlertDialog(
             onDismissRequest = { viewModel.hideAddFeedingDialog() },
-            title = { Text("Log Feeding", style = MaterialTheme.typography.headlineSmall) },
+            title = { Text("Feeding Log", style = MaterialTheme.typography.headlineSmall) },
             text = {
                 Column {
                     Text("Type", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     Spacer(Modifier.height(8.dp))
-                    Row(Modifier.fillMaxWidth(), Arrangement.spacedBy(8.dp)) {
+                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         listOf(
                             Triple(FeedType.BREAST, Icons.Filled.PregnantWoman, "Breast"),
                             Triple(FeedType.FORMULA, Icons.Filled.LocalDrink, "Formula"),
@@ -305,10 +305,9 @@ fun FeedingScreen(
                             FilterChip(
                                 selected = isSelected,
                                 onClick = { viewModel.updateFeedType(type) },
-                                label = { Text(label) },
+                                label = { Text(label, maxLines = 1) },
                                 leadingIcon = { Icon(icon, null, Modifier.size(16.dp)) },
                                 shape = RoundedCornerShape(12.dp),
-                                modifier = Modifier.weight(1f),
                                 colors = FilterChipDefaults.filterChipColors(
                                     selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
                                     selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer

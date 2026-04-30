@@ -15,6 +15,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -62,61 +63,24 @@ fun GenAIChatScreen(
                 )
             )
         },
-        bottomBar = {
-            Surface(
-                color = MaterialTheme.colorScheme.surfaceContainerLow,
-                tonalElevation = 0.dp
-            ) {
-                Row(
-                    Modifier.padding(12.dp).fillMaxWidth(),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    OutlinedTextField(
-                        value = state.currentQuery,
-                        onValueChange = { viewModel.updateQuery(it) },
-                        placeholder = {
-                            Text(
-                                "Ask about feeding, nutrition...",
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                        },
-                        modifier = Modifier.weight(1f),
-                        shape = RoundedCornerShape(28.dp),
-                        singleLine = false,
-                        maxLines = 3,
-                        colors = OutlinedTextFieldDefaults.colors(
-                            focusedBorderColor = MaterialTheme.colorScheme.primary,
-                            unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant.copy(0.5f),
-                            focusedContainerColor = MaterialTheme.colorScheme.surfaceContainerHighest,
-                            unfocusedContainerColor = MaterialTheme.colorScheme.surfaceContainerHighest
-                        )
-                    )
-                    Spacer(Modifier.width(8.dp))
-                    FilledIconButton(
-                        onClick = { viewModel.sendMessage() },
-                        enabled = state.currentQuery.isNotBlank() && !state.isTyping,
-                        shape = RoundedCornerShape(16.dp),
-                        colors = IconButtonDefaults.filledIconButtonColors(
-                            containerColor = MaterialTheme.colorScheme.primary
-                        )
-                    ) {
-                        Icon(
-                            Icons.AutoMirrored.Filled.Send,
-                            "Send",
-                            tint = MaterialTheme.colorScheme.onPrimary
-                        )
-                    }
-                }
-            }
-        },
+        contentWindowInsets = WindowInsets(0, 0, 0, 0),
         containerColor = MaterialTheme.colorScheme.background
     ) { padding ->
-        LazyColumn(
-            modifier = Modifier.fillMaxSize().padding(padding).padding(horizontal = 16.dp),
-            state = listState,
-            reverseLayout = true,
-            verticalArrangement = Arrangement.spacedBy(12.dp)
+        Column(
+            Modifier
+                .fillMaxSize()
+                .padding(padding)
+                .imePadding()
         ) {
+            LazyColumn(
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp),
+                state = listState,
+                reverseLayout = true,
+                verticalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
             if (state.isTyping) {
                 item {
                     Card(
@@ -140,23 +104,9 @@ fun GenAIChatScreen(
             }
 
             items(state.conversations) { convo ->
-                // User message — right aligned, primary container
-                Card(
-                    modifier = Modifier.fillMaxWidth(0.85f).padding(start = 48.dp),
-                    shape = RoundedCornerShape(20.dp, 20.dp, 4.dp, 20.dp),
-                    colors = CardDefaults.cardColors(
-                        containerColor = MaterialTheme.colorScheme.primaryContainer
-                    ),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
-                ) {
-                    Text(
-                        convo.userQuery,
-                        Modifier.padding(14.dp),
-                        style = MaterialTheme.typography.bodyLarge,
-                        color = MaterialTheme.colorScheme.onPrimaryContainer
-                    )
-                }
-                Spacer(Modifier.height(4.dp))
+                // In reverseLayout, items are rendered bottom-to-top.
+                // AI response first (appears below), then user query (appears above).
+
                 // AI response — left aligned, surface container
                 Card(
                     modifier = Modifier.fillMaxWidth(0.85f),
@@ -213,6 +163,25 @@ fun GenAIChatScreen(
                         }
                     }
                 }
+
+                Spacer(Modifier.height(4.dp))
+
+                // User message — right aligned, primary container
+                Card(
+                    modifier = Modifier.fillMaxWidth(0.85f).padding(start = 48.dp),
+                    shape = RoundedCornerShape(20.dp, 20.dp, 4.dp, 20.dp),
+                    colors = CardDefaults.cardColors(
+                        containerColor = MaterialTheme.colorScheme.primaryContainer
+                    ),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
+                ) {
+                    Text(
+                        convo.userQuery,
+                        Modifier.padding(14.dp),
+                        style = MaterialTheme.typography.bodyLarge,
+                        color = MaterialTheme.colorScheme.onPrimaryContainer
+                    )
+                }
             }
 
             // Welcome empty state
@@ -240,6 +209,54 @@ fun GenAIChatScreen(
                             style = MaterialTheme.typography.bodyLarge,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                             textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                        )
+                    }
+                }
+            }
+        }
+
+            // Input bar — sits at bottom, pushed up by imePadding
+            Surface(
+                color = MaterialTheme.colorScheme.surfaceContainerLow,
+                tonalElevation = 0.dp
+            ) {
+                Row(
+                    Modifier.padding(12.dp).fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    OutlinedTextField(
+                        value = state.currentQuery,
+                        onValueChange = { viewModel.updateQuery(it) },
+                        placeholder = {
+                            Text(
+                                "Ask about feeding, nutrition...",
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        },
+                        modifier = Modifier.weight(1f),
+                        shape = RoundedCornerShape(28.dp),
+                        singleLine = false,
+                        maxLines = 3,
+                        colors = OutlinedTextFieldDefaults.colors(
+                            focusedBorderColor = MaterialTheme.colorScheme.primary,
+                            unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant.copy(0.5f),
+                            focusedContainerColor = MaterialTheme.colorScheme.surfaceContainerHighest,
+                            unfocusedContainerColor = MaterialTheme.colorScheme.surfaceContainerHighest
+                        )
+                    )
+                    Spacer(Modifier.width(8.dp))
+                    FilledIconButton(
+                        onClick = { viewModel.sendMessage() },
+                        enabled = state.currentQuery.isNotBlank() && !state.isTyping,
+                        shape = RoundedCornerShape(16.dp),
+                        colors = IconButtonDefaults.filledIconButtonColors(
+                            containerColor = MaterialTheme.colorScheme.primary
+                        )
+                    ) {
+                        Icon(
+                            Icons.AutoMirrored.Filled.Send,
+                            "Send",
+                            tint = MaterialTheme.colorScheme.onPrimary
                         )
                     }
                 }
