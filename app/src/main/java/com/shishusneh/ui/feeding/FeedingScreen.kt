@@ -1,6 +1,13 @@
 package com.shishusneh.ui.feeding
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.expandVertically
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.shrinkVertically
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -305,8 +312,12 @@ fun FeedingScreen(
                             FilterChip(
                                 selected = isSelected,
                                 onClick = { viewModel.updateFeedType(type) },
-                                label = { Text(label, maxLines = 1) },
-                                leadingIcon = { Icon(icon, null, Modifier.size(16.dp)) },
+                                label = {
+                                    if (isSelected) {
+                                        Text(label, maxLines = 1)
+                                    }
+                                },
+                                leadingIcon = { Icon(icon, label, Modifier.size(16.dp)) },
                                 shape = RoundedCornerShape(12.dp),
                                 colors = FilterChipDefaults.filterChipColors(
                                     selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
